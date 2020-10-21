@@ -6,7 +6,7 @@ import java.util.ArrayList;
 /**
  * Interface donnant l'accés à la méthode getListe
  */
-public interface ISymptomsRanking {
+public interface ISymptomRanking {
 
     public ArrayList<String> rankList(ArrayList<String> initialList) throws IOException;
 }

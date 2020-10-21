@@ -6,7 +6,7 @@ import java.util.TreeMap;
 /**
  * Permet de trier les symptômes par ordre alphabétique et les compter.
  */
-public class SymptomsRanking implements ISymptomsRanking {
+public class SymptomRanking implements ISymptomRanking {
 
     /**
      * Mise en ordre alphabétique dans un dictionnaire.
