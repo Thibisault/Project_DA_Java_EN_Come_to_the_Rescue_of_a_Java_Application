@@ -14,10 +14,9 @@ public class SymptomRanking implements ISymptomRanking {
      * @param initialList liste non classé des symptômes.
      * @return Liste classée alphabétiquement des symptômes avec leur nombre d'occurence.
      */
-    public ArrayList<String> rankList(ArrayList<String> initialList) {
+    public TreeMap<String, Integer> rankList(ArrayList<String> initialList) {
 
         TreeMap<String, Integer> symptoms = new TreeMap<>();
-        ArrayList<String> List = new ArrayList<>();
 
         for (String line : initialList) {
             if (symptoms.containsKey(line)) {
@@ -28,9 +27,6 @@ public class SymptomRanking implements ISymptomRanking {
                 symptoms.put(line, 1);
             }
         }
-        for (String cle : symptoms.keySet()) {
-            List.add(cle + "=" + symptoms.get(cle));
-        }
-        return List;
+        return symptoms;
     }
 }

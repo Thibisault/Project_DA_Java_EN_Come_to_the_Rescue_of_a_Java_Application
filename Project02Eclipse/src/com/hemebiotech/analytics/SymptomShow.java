@@ -1,17 +1,18 @@
-/* package com.hemebiotech.analytics;
+package com.hemebiotech.analytics;
 
 import java.util.ArrayList;
+import java.util.TreeMap;
 
-public class SymptomsShow {
+public class SymptomShow implements IShowClass {
 
 
+public ArrayList<String> showlist(TreeMap<String, Integer> symptoms) {
 
-
-    ArrayList<String> List = new ArrayList<>();
+    ArrayList<String> list = new ArrayList<>();
 
     for (String cle : symptoms.keySet()) {
-        liste.add(cle + "=" + symptoms.get(cle));
+        list.add(cle + "=" + symptoms.get(cle));
     }
-
+    return list;
+   }
 }
-*/
