@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * Contient la méthode permettant de lire un fichier et de copier son contenu dans une liste.
  * contient la méthode permettant d'ecrire une liste dans un fichier.
  */
-public class ReadSymptomDataFromFile implements ISymptomReader, ISymptomWriter {
+public class    ReadSymptomDataFromFile implements ISymptomReader, ISymptomWriter {
 
     /**
      * Lire chaque ligne d'un fichier pour les mettre dans une liste.

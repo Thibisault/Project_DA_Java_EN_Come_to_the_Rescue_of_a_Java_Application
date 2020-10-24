@@ -19,12 +19,12 @@ public class AnalyticsCounter {
         ISymptomReader symptomsReader = new ReadSymptomDataFromFile();
         ISymptomWriter symptomsWriter = new ReadSymptomDataFromFile();
         ISymptomRanking symptomsRanking = new SymptomRanking();
-        IShowClass showClass = new SymptomShow();
+        ISymptomRestitution symptomRestitution = new SymptomRestitution();
 
         try {
             ArrayList<String> initialList = symptomsReader.getResult("symptoms.txt");
             TreeMap<String, Integer> symptoms = symptomsRanking.rankList(initialList);
-            ArrayList<String> finalList = showClass.showlist(symptoms);
+            ArrayList<String> finalList = symptomRestitution.getListFinal(symptoms);
             symptomsWriter.writeList(finalList, "result.out");
         } catch (IOException e) {
             e.printStackTrace();
